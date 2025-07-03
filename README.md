@@ -11,15 +11,14 @@ The project is implemented using **Python**, with the analysis conducted in a **
 ## 📑 Table of Contents
 
 1. [📌 Introduction](#introduction)
-2. [📥 Data Loading & Exploration](#data-loading--exploration)
-3. [📊 Data Visualization](#data-visualization)
-4. [🔍 K-Means Clustering](#k-means-clustering)
-5. [📈 Elbow Method for Optimal Clusters](#elbow-method-for-optimal-clusters)
-6. [🎨 Cluster Visualization](#cluster-visualization)
-7. [✅ Conclusion](#conclusion)
-8. [🛠 Technologies & Libraries Used](#technologies--libraries-used)
-9. [🧰 Tools](#tools)
-10. [▶️ How to Run](#how-to-run)
+2. [🛠 Technologies & Libraries Used](#technologies--libraries-used)
+3. [📥 Data Loading & Exploration](#data-loading--exploration)
+4. [📊 Data Visualization](#data-visualization)
+5. [🔍 K-Means Clustering](#k-means-clustering)
+6. [📈 Elbow Method for Optimal Clusters](#elbow-method-for-optimal-clusters)
+7. [🎨 Cluster Visualization](#cluster-visualization)
+8. [▶️ How to Run](#how-to-run)
+9. [✅ Conclusion](#conclusion)
 
 ---
 
@@ -31,6 +30,19 @@ This notebook focuses on analyzing website traffic data to understand the relati
 * **💰 Traffic Cost**: The estimated cost of generating traffic for the keyword.
 
 The aim is to group the data into clusters based on these two features.
+
+---
+
+## 🛠 Technologies & Libraries Used
+
+| Technology                       | Description                                 |
+| -------------------------------- | ------------------------------------------- |
+| 🐍 **Python** (Jupyter Notebook) | Programming language & interactive analysis |
+| 🐼 **Pandas**                    | Data manipulation & analysis                |
+| 🔢 **NumPy**                     | Numerical computing                         |
+| 📊 **Matplotlib**                | Data visualization                          |
+| 🎨 **Seaborn**                   | Statistical data visualization              |
+| 🤖 **scikit-learn**              | Machine learning algorithms                 |
 
 ---
 
@@ -74,33 +86,6 @@ The aim is to group the data into clusters based on these two features.
 
 ---
 
-## ✅ Conclusion
-
-* The clustering reveals distinct groupings in the data based on **Search Volume** and **Traffic Cost**.
-* Visualizations help in understanding the separation and central points of the clusters.
-
----
-
-## 🛠 Technologies & Libraries Used
-
-* 🐍 Python (Jupyter Notebook)
-* 🐼 Pandas
-* 🔢 NumPy
-* 📊 Matplotlib
-* 🎨 Seaborn
-* 🤖 scikit-learn
-
----
-
-## 🧰 Tools
-
-* **📝 Jupyter Notebook**: Interactive analysis and visualization.
-* **💻 Visual Studio Code** or other Python IDEs: Development environment.
-* **🔗 Git & GitHub**: Version control and project sharing.
-* **💻 Command Line Interface (CLI)**: For installing dependencies and running notebooks.
-
----
-
 ## ▶️ How to Run
 
 1. Clone this repository.
@@ -114,3 +99,11 @@ pip install pandas numpy matplotlib seaborn scikit-learn
 4. Run the notebook cells step-by-step.
 
 ---
+
+## ✅ Conclusion
+
+* The clustering reveals distinct groupings in the data based on **Search Volume** and **Traffic Cost**.
+* Visualizations help in understanding the separation and central points of the clusters.
+
+---
+
