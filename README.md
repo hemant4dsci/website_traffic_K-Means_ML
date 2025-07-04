@@ -79,7 +79,7 @@ plt.ylabel('Traffic Cost')
 plt.title('Relation between Traffic Cost per Search Volume')
 plt.show()
 ```
-![Scatter Plot](
+![Scatter Plot](ml_images/scatter_plot_traffic_cost_search_volume.png)
 ---
 
 ## 🔍 K-Means Clustering
