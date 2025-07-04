@@ -51,6 +51,19 @@ The aim is to group the data into clusters based on these two features.
 * The dataset (`website_traffic_data.csv`) is loaded using **Pandas**.
 * Basic exploratory data analysis (`head()`, `info()`, `describe()`) is performed to understand the structure and summary statistics of the data.
 
+```python
+import os
+os.environ["OMP_NUM_THREADS"] = "1"
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.cluster import KMeans
+
+wtd = pd.read_csv('website_traffic_data.csv')
+wtd.head(10)
+```
 ---
 
 ## 📊 Data Visualization
