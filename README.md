@@ -71,6 +71,15 @@ wtd.head(10)
 * A **scatter plot** is created using **Seaborn** and **Matplotlib** to visualize the relationship between **Search Volume** and **Traffic Cost**.
 * This helps in visually inspecting possible natural clusters.
 
+```python
+plt.figure(figsize=(10,7))
+sns.scatterplot(data=wtd,x='Search Volume',y='Traffic Cost')
+plt.xlabel('Search Volume')
+plt.ylabel('Traffic Cost')
+plt.title('Relation between Traffic Cost per Search Volume')
+plt.show()
+```
+![Scatter Plot](
 ---
 
 ## 🔍 K-Means Clustering
