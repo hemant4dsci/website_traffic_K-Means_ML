@@ -167,6 +167,6 @@ Hi, I'm Hemant, a data enthusiast passionate about turning raw data into meaning
 📫 **Let’s connect:**  
 - GitHub : [GitHub Profile](https://github.com/hemant1491)
 - LinkedIn : [LinkedIn Profile](https://www.linkedin.com/in/hemant1491/)  
-- Email : hemant0452@outlook.com
+- Email : hemant_data.science@yahoo.com
 
 ---
