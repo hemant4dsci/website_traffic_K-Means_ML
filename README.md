@@ -79,12 +79,12 @@ plt.show()
 
 3. **Data Preprocessing**
    - Keep only relevant numeric columns
+   - Fill missing values with the **median**
+   - Standardize features with `StandardScaler`
 ```python
 data = pd.DataFrame(data=df, columns=['Traffic', 'Traffic (%)', 'Traffic Cost', 'Traffic Cost (%)', 'Search Volume'])
 data.head()
 ```
-   - Fill missing values with the **median**
-   - Standardize features with `StandardScaler`
 ```python
 from sklearn.preprocessing import StandardScaler
 
@@ -125,6 +125,16 @@ labels = final_kmeans.labels_
 6. **Dimensionality Reduction with PCA**
    - Reduce from n-dimensional space to **2D**
    - Assign **Cluster Labels** back to the DataFrame
+      ```python
+      from sklearn.decomposition import PCA
+      
+      pca = PCA(n_components=2)
+      X_pca = pca.fit_transform(data_scaled.values)
+      pca_df = pd.DataFrame(X_pca, columns=['PC1', 'PC2'])
+      pca_df['Cluster'] = labels
+      pca_df.head()
+      ```
+   - Transform **centroids** into PCA space for plotting
 ```python
 from sklearn.decomposition import PCA
 
@@ -134,7 +144,6 @@ pca_df = pd.DataFrame(X_pca, columns=['PC1', 'PC2'])
 pca_df['Cluster'] = labels
 pca_df.head()
 ```
-   - Transform **centroids** into PCA space for plotting
 ```python
 centroids_pca = pca.transform(final_kmeans.cluster_centers_)
 ```
