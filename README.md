@@ -75,6 +75,7 @@ plt.figure(figsize=(10,7))
 sns.heatmap(data=df.corr(numeric_only=True), annot=True, cmap='coolwarm')
 plt.show()
 ```
+![Correlation Heatmap](ml_images/correlation_between_numerical_features.png)
 
 3. **Data Preprocessing**
    - Keep only relevant numeric columns
