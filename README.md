@@ -70,6 +70,11 @@ Contains website keyword metrics including:
    - Observations:
      - Search Volume strongly correlates (>0.70) with Traffic, Traffic (%), Traffic Cost, and Traffic Cost (%)
      - Some features show perfect correlation (1.00)
+``python
+plt.figure(figsize=(10,7))
+sns.heatmap(data=df.corr(numeric_only=True), annot=True, cmap='coolwarm')
+plt.show()
+``
 
 3. **Data Preprocessing**
    - Keep only relevant numeric columns
