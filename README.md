@@ -168,10 +168,14 @@ pip install pandas numpy matplotlib seaborn scikit-learn
 
 ---
 
-## ✅ Conclusion
+## 📈 Results & Insights
 
-* The clustering reveals distinct groupings in the data based on **Search Volume** and **Traffic Cost**.
-* Visualizations help in understanding the separation and central points of the clusters.
+3 distinct traffic-based clusters were identified:
+   - High Traffic / High Value
+   - Medium Traffic / Moderate Value
+   -Low Traffic / Low Value
+
+Search Volume is the primary driver for other traffic metrics.
 
 ---
 
