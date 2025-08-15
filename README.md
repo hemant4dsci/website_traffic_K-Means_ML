@@ -1,35 +1,44 @@
-# 🚀 Website Traffic Clustering Project
+# 📊 K-Means Clustering – Website Traffic Segmentation
 
-## 📝 Overview
-
-This project performs an unsupervised machine learning analysis on website traffic data using **K-Means Clustering**. The primary goal is to identify patterns or clusters in the relationship between **Search Volume** and **Traffic Cost**.
-
-The project is implemented using **Python**, with the analysis conducted in a **Jupyter Notebook**.
+This project applies **K-Means Clustering** (unsupervised machine learning) to segment website traffic data into meaningful groups based on metrics like search volume, traffic, and traffic cost.  
+The goal is to identify distinct patterns in web traffic behavior for deeper marketing and SEO insights.
 
 ---
 
 ## 📑 Table of Contents
-
-1. [📌 Introduction](#introduction)
-2. [🛠 Technologies & Libraries Used](#technologies--libraries-used)
-3. [📥 Data Loading & Exploration](#data-loading--exploration)
-4. [📊 Data Visualization](#data-visualization)
-5. [🔍 K-Means Clustering](#k-means-clustering)
-6. [📈 Elbow Method for Optimal Clusters](#elbow-method-for-optimal-clusters)
-7. [🎨 Cluster Visualization](#cluster-visualization)
-8. [▶️ How to Run](#how-to-run)
-9. [✅ Conclusion](#conclusion)
+1. [Project Overview](#-project-overview)
+2. [Tools & Technologies](#-tools--technologies)
+3. [Dataset](#-dataset)
+4. [Workflow](#-workflow)
+5. [Installation & Usage](#-installation--usage)
+6. [Results & Insights](#-results--insights)
+7. [Tech Stack](#-tech-stack)
+8. [License](#-license)
+9. [Contributing](#-contributing)
+10. [Author](#-author)
 
 ---
 
-## 📌 Introduction
+## 🚀 Project Overview
 
-This notebook focuses on analyzing website traffic data to understand the relationship between:
+The notebook `k_means_cluster_web_traffic.ipynb` demonstrates the complete **data science pipeline** for clustering, including:
+- Data exploration
+- Feature correlation analysis
+- Data preprocessing
+- Optimal cluster selection using the Elbow Method
+- K-Means clustering
+- PCA-based 2D visualization of results
 
-* **🔎 Search Volume**: The number of times a keyword is searched.
-* **💰 Traffic Cost**: The estimated cost of generating traffic for the keyword.
+---
 
-The aim is to group the data into clusters based on these two features.
+## 🛠 Tools & Technologies
+- **Python** – Core programming language for analysis and modeling
+- **Jupyter Notebook** – Interactive coding and documentation
+- **pandas** – Data manipulation and analysis
+- **numpy** – Numerical computations
+- **scikit-learn** – Machine learning library (KMeans, StandardScaler, PCA)
+- **Seaborn** – Statistical data visualization
+- **Matplotlib** – Plotting and charting
 
 ---
 
@@ -37,12 +46,13 @@ The aim is to group the data into clusters based on these two features.
 
 | Technology                       | Description                                 |
 | -------------------------------- | ------------------------------------------- |
-| 🐍 **Python** (Jupyter Notebook) | Programming language & interactive analysis |
-| 🐼 **Pandas**                    | Data manipulation & analysis                |
-| 🔢 **NumPy**                     | Numerical computing                         |
-| 📊 **Matplotlib**                | Data visualization                          |
-| 🎨 **Seaborn**                   | Statistical data visualization              |
-| 🤖 **scikit-learn**              | Machine learning algorithms                 |
+| 🐍 **Python**            | Core programming language for analysis and modeling |
+| 📓 **Jupyter Notebook**  | Interactive coding and documentation |
+| 📊 **pandas**            | Data manipulation and analysis |
+| 🔢 **numpy**             | Numerical computations |
+| 🤖 **scikit-learn**      | Machine learning library (KMeans, StandardScaler, PCA) |
+| 📈 **Seaborn**           | Statistical data visualization |
+| 📉 **Matplotlib**        | Plotting and charting |
 
 ---
 
