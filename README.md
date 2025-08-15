@@ -79,11 +79,39 @@ plt.show()
 
 3. **Data Preprocessing**
    - Keep only relevant numeric columns
+```python
+data = pd.DataFrame(data=df, columns=['Traffic', 'Traffic (%)', 'Traffic Cost', 'Traffic Cost (%)', 'Search Volume'])
+data.head()
+```
    - Fill missing values with the **median**
    - Standardize features with `StandardScaler`
+```python
+from sklearn.preprocessing import StandardScaler
+
+scaler = StandardScaler()
+data_scaled = scaler.fit_transform(data)
+```
 
 4. **Choosing Optimal Clusters**
    - Use **Elbow Method** (inertia vs. k) to find the elbow point
+```python
+from sklearn.cluster import KMeans
+
+inertia_values = []
+cluster_range = range(2, 11)
+
+for k in cluster_range:
+    kmeans = KMeans(n_clusters=k, random_state=42, n_init=10)
+    kmeans.fit(data_scaled)
+    inertia_values.append(kmeans.inertia_)
+
+plt.figure(figsize=(10, 7))
+sns.lineplot(x=list(cluster_range), y=inertia_values, marker='o')
+plt.title('Elbow Method')
+plt.xlabel('Number of clusters (k)')
+plt.ylabel('Inertia')
+plt.show()
+```
 
 5. **Applying K-Means**
    - Train K-Means with the chosen `k`
@@ -93,6 +121,9 @@ plt.show()
    - Reduce from n-dimensional space to **2D**
    - Transform **centroids** into PCA space for plotting
 
+7. **Visualization**
+   - Scatter plot of clusters using **Seaborn**
+   - Centroids marked with large black stars
 ---
 
 ## ▶️ How to Run
