@@ -79,18 +79,18 @@ plt.show()
 
 3. **Data Preprocessing**
    - Keep only relevant numeric columns
+   ```python
+   data = pd.DataFrame(data=df, columns=['Traffic', 'Traffic (%)', 'Traffic Cost', 'Traffic Cost (%)', 'Search Volume'])
+   data.head()
+   ```
    - Fill missing values with the **median**
    - Standardize features with `StandardScaler`
-```python
-data = pd.DataFrame(data=df, columns=['Traffic', 'Traffic (%)', 'Traffic Cost', 'Traffic Cost (%)', 'Search Volume'])
-data.head()
-```
-```python
-from sklearn.preprocessing import StandardScaler
-
-scaler = StandardScaler()
-data_scaled = scaler.fit_transform(data)
-```
+   ```python
+   from sklearn.preprocessing import StandardScaler
+   
+   scaler = StandardScaler()
+   data_scaled = scaler.fit_transform(data)
+   ```
 
 4. **Choosing Optimal Clusters**
    - Use **Elbow Method** (inertia vs. k) to find the elbow point
@@ -116,11 +116,11 @@ plt.show()
 
 5. **Applying K-Means**
    - Train K-Means with the chosen `k`
-```python
-final_kmeans = KMeans(n_clusters=4, random_state=42, n_init=10)
-final_kmeans.fit(data_scaled)
-labels = final_kmeans.labels_
-```
+   ```python
+   final_kmeans = KMeans(n_clusters=4, random_state=42, n_init=10)
+   final_kmeans.fit(data_scaled)
+   labels = final_kmeans.labels_
+   ```
 
 6. **Dimensionality Reduction with PCA**
    - Reduce from n-dimensional space to **2D**
@@ -135,18 +135,9 @@ labels = final_kmeans.labels_
      pca_df.head()
      ```
    - Transform **centroids** into PCA space for plotting
-```python
-from sklearn.decomposition import PCA
-
-pca = PCA(n_components=2)
-X_pca = pca.fit_transform(data_scaled.values)
-pca_df = pd.DataFrame(X_pca, columns=['PC1', 'PC2'])
-pca_df['Cluster'] = labels
-pca_df.head()
-```
-```python
-centroids_pca = pca.transform(final_kmeans.cluster_centers_)
-```
+   ```python
+   centroids_pca = pca.transform(final_kmeans.cluster_centers_)
+   ```
 
 7. **Visualization**
    - Scatter plot of clusters using **Seaborn**
