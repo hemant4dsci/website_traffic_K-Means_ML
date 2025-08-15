@@ -112,18 +112,46 @@ plt.xlabel('Number of clusters (k)')
 plt.ylabel('Inertia')
 plt.show()
 ```
+![The Elbow Method](ml_images/elbow_method.png)
 
 5. **Applying K-Means**
    - Train K-Means with the chosen `k`
-   - Assign **Cluster Labels** back to the DataFrame
+```python
+final_kmeans = KMeans(n_clusters=4, random_state=42, n_init=10)
+final_kmeans.fit(data_scaled)
+labels = final_kmeans.labels_
+```
 
 6. **Dimensionality Reduction with PCA**
    - Reduce from n-dimensional space to **2D**
+   - Assign **Cluster Labels** back to the DataFrame
+```python
+from sklearn.decomposition import PCA
+
+pca = PCA(n_components=2)
+X_pca = pca.fit_transform(data_scaled.values)
+pca_df = pd.DataFrame(X_pca, columns=['PC1', 'PC2'])
+pca_df['Cluster'] = labels
+pca_df.head()
+```
    - Transform **centroids** into PCA space for plotting
+```python
+centroids_pca = pca.transform(final_kmeans.cluster_centers_)
+```
 
 7. **Visualization**
    - Scatter plot of clusters using **Seaborn**
    - Centroids marked with large black stars
+```python
+plt.figure(figsize=(10, 7))
+sns.scatterplot(data=pca_df, x='PC1', y='PC2', hue='Cluster', palette='tab10', s=100)
+plt.scatter(centroids_pca[:, 0], centroids_pca[:, 1], c='black', s=250, marker='*', label='Centroids')
+plt.title("K-Means Clustering - PCA Projection")
+plt.legend()
+plt.show()
+```
+![Cluster Visualization](ml_images/cluster_visualization_scatter_plot.png)
+
 ---
 
 ## ▶️ How to Run
