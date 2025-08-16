@@ -173,7 +173,7 @@ pip install pandas numpy matplotlib seaborn scikit-learn
 3 distinct traffic-based clusters were identified:
    - High Traffic / High Value
    - Medium Traffic / Moderate Value
-   -Low Traffic / Low Value
+   - Low Traffic / Low Value
 
 Search Volume is the primary driver for other traffic metrics.
 
