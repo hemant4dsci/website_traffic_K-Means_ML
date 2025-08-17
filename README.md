@@ -63,31 +63,24 @@ Contains website keyword metrics including:
 
 ```
 website_traffic_K-Means_ML/
+├─ configs/
+│  └─ db_config.yaml
 ├─ data/
 │  ├─ external/
-│  │  └─ .gitkeep
 │  ├─ interim/
-│  │  └─ .gitkeep
 │  ├─ processed/
-│  │  ├─ .gitkeep
 │  │  └─ website_traffic_data.csv
 │  └─ raw/
-│     └─ .gitkeep
-├─ models/
 ├─ notebooks/
-│  ├─ .gitkeep
 │  └─ k_means_cluster_web_traffic.ipynb
-├─ references/
-│  └─ .gitkeep
 ├─ reports/
 │  ├─ figures/
-│  │  ├─ .gitkeep
 │  │  ├─ cluster_visualization_scatter_plot.png
 │  │  ├─ correlation_between_numerical_features.png
 │  │  └─ elbow_method.png
-│  ├─ .gitkeep
 │  └─ webtraffic_clustering_report.pdf
-├─ .env.example
+├─ scripts/
+├─ sql/
 ├─ .gitignore
 ├─ LICENCE
 ├─ README.md
