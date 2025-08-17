@@ -85,7 +85,8 @@ website_traffic_K-Means_ML/
 │  │  ├─ cluster_visualization_scatter_plot.png
 │  │  ├─ correlation_between_numerical_features.png
 │  │  └─ elbow_method.png
-│  └─ .gitkeep
+│  ├─ .gitkeep
+│  └─ webtraffic_clustering_report.pdf
 ├─ .env.example
 ├─ .gitignore
 ├─ LICENCE
