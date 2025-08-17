@@ -7,12 +7,12 @@ The goal is to identify distinct patterns in web traffic behavior for deeper mar
 
 ## 📑 Table of Contents
 1. [Project Overview](#-project-overview)
-2. [Tools & Technologies](#-tools--technologies)
+2. [Technologies & Libraries Used](#-tools--technologies)
 3. [Dataset](#-dataset)
-4. [Workflow](#-workflow)
-5. [Installation & Usage](#-installation--usage)
-6. [Results & Insights](#-results--insights)
-7. [Tech Stack](#-tech-stack)
+4. [Project Tree](#-project-tree)
+5. [Workflow](#-workflow)
+6. [Installation & Usage](#-installation--usage)
+7. [Results & Insights](#-results--insights)
 8. [License](#-license)
 9. [Contributing](#-contributing)
 10. [Author](#-author)
@@ -59,6 +59,43 @@ Contains website keyword metrics including:
 
 ---
 
+## 📂 Project Tree
+
+```
+website_traffic_K-Means_ML/
+├─ data/
+│  ├─ external/
+│  │  └─ .gitkeep
+│  ├─ interim/
+│  │  └─ .gitkeep
+│  ├─ processed/
+│  │  ├─ .gitkeep
+│  │  └─ website_traffic_data.csv
+│  └─ raw/
+│     └─ .gitkeep
+├─ models/
+├─ notebooks/
+│  ├─ .gitkeep
+│  └─ k_means_cluster_web_traffic.ipynb
+├─ references/
+│  └─ .gitkeep
+├─ reports/
+│  ├─ figures/
+│  │  ├─ .gitkeep
+│  │  ├─ cluster_visualization_scatter_plot.png
+│  │  ├─ correlation_between_numerical_features.png
+│  │  └─ elbow_method.png
+│  └─ .gitkeep
+├─ .env.example
+├─ .gitignore
+├─ LICENCE
+├─ README.md
+└─ requirements.txt
+
+```
+
+---
+
 ## 🛠 Workflow
 
 1. **Data Loading & Inspection**
@@ -75,7 +112,7 @@ plt.figure(figsize=(10,7))
 sns.heatmap(data=df.corr(numeric_only=True), annot=True, cmap='coolwarm')
 plt.show()
 ```
-![Correlation Heatmap](ml_images/correlation_between_numerical_features.png)
+![Correlation Heatmap](reports/figures/correlation_between_numerical_features.png)
 
 3. **Data Preprocessing**
    - Keep only relevant numeric columns
@@ -112,7 +149,7 @@ plt.xlabel('Number of clusters (k)')
 plt.ylabel('Inertia')
 plt.show()
 ```
-![The Elbow Method](ml_images/elbow_method.png)
+![The Elbow Method](reports/figures/elbow_method.png)
 
 5. **Applying K-Means**
    - Train K-Means with the chosen `k`
@@ -150,11 +187,11 @@ plt.title("K-Means Clustering - PCA Projection")
 plt.legend()
 plt.show()
 ```
-![Cluster Visualization](ml_images/cluster_visualization_scatter_plot.png)
+![Cluster Visualization](reports/figures/cluster_visualization_scatter_plot.png)
 
 ---
 
-## ▶️ How to Run
+## ▶️ Installation & Usage
 
 1. Clone this repository.
 2. Open the `.ipynb` file in **Jupyter Notebook**.
@@ -179,7 +216,15 @@ Search Volume is the primary driver for other traffic metrics.
 
 ---
 
-## 👤 About Me
+## 📜 License
+
+This project is licensed under the MIT License.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request.
+
+## 👤 Author
 
 Hi, I'm Hemant, a data enthusiast passionate about turning raw data into meaningful business insights.
 
