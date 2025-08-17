@@ -221,9 +221,13 @@ Search Volume is the primary driver for other traffic metrics.
 
 This project is licensed under the MIT License.
 
+---
+
 ## 🤝 Contributing
 
 Contributions are welcome! Please fork the repository and submit a pull request.
+
+---
 
 ## 👤 Author
 
