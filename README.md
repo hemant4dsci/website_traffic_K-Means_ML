@@ -47,7 +47,7 @@ The notebook `k_means_cluster_web_traffic.ipynb` demonstrates the complete **dat
 
 ## 📂 Dataset
 
-**File:** `website_traffic_data.csv`  
+**File:** `data/final/website_traffic_data.csv`  
 Contains website keyword metrics including:
 - **Search Volume**
 - **Traffic**
@@ -66,10 +66,9 @@ website_traffic_K-Means_ML/
 ├─ configs/
 │  └─ db_config.yaml
 ├─ data/
-│  ├─ external/
-│  ├─ interim/
-│  ├─ processed/
+│  ├─ final/
 │  │  └─ website_traffic_data.csv
+│  ├─ interim/
 │  └─ raw/
 ├─ notebooks/
 │  └─ k_means_cluster_web_traffic.ipynb
